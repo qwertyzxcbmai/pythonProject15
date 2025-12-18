@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+</head>
+<body>
+
+<nav>
+  <a href="{% url 'index' %}">Home</a> |
+  <a href="{% url 'about_me' %}">About me</a>
+</nav>
+
+<h1>Головна сторінка</h1>
+
+<h2>Musicians</h2>
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Ім’я</th>
+    <th>Вік</th>
+  </tr>
+  {% for m in musicians %}
+  <tr>
+    <td>{{ m.name }}</td>
+    <td>{{ m.age }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>Albums</h2>
+<table border="1" cellpadding="8">
+  <tr>
+    <th>Ім’я</th>
+    <th>Вік</th>
+  </tr>
+  {% for a in albums %}
+  <tr>
+    <td>{{ a.name }}</td>
+    <td>{{ a.age }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
